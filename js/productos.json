@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nombre": "Smartphone Samsung Galaxy S21",
+    "precio": 799
+  },
+  {
+    "id": 2,
+    "nombre": "Laptop Dell XPS 13",
+    "precio": 1299
+  },
+  {
+    "id": 3,
+    "nombre": "Auriculares Sony WH-1000XM4",
+    "precio": 349
+  },
+  {
+    "id": 4,
+    "nombre": "Smart TV LG OLED C1",
+    "precio": 1499
+  },
+  {
+    "id": 5,
+    "nombre": "Cámara Canon EOS R5",
+    "precio": 3499
+  },
+  {
+    "id": 6,
+    "nombre": "Teclado mecánico Corsair K95 RGB Platinum XT",
+    "precio": 199
+  },
+  {
+    "id": 7,
+    "nombre": "Monitor Dell UltraSharp U2719D",
+    "precio": 349
+  },
+  {
+    "id": 8,
+    "nombre": "Robot aspirador iRobot Roomba i7+",
+    "precio": 799
+  }
+]

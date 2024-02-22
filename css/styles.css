@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(204, 219, 219);
+    padding: 20px 0px;
+}
+
+main {
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+#id-mi-div-carrito {
+    display: none;
+    border: 1px solid #000;
+    background-color: rgb(216, 216, 216);
+    position: absolute;
+    top: 91px;
+    right: 8.8%;
+    width: 30%;
+    padding: 20px 10px;
+}
+
+#id-contenedor-carrito, #id-contenedor-total-btn {
+    margin: 10px 0px;
+}
+
+.nav-link {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #915df0;
+    color: #fff;
+    margin: 0 5px;
+}
+
+#id-btn-nav-carrito > i {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#numero {
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+#container-productos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.card {
+    padding: 20px;
+    width: 40%;
+    border: 1px solid #bebebe;
+    height: 190px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.card2{
+    min-height: 150px;
+    border: 1px solid #915df0;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.btn-agregar-carrito {
+    background-color: rgb(197, 238, 157);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.productos-carrito {
+    text-align: left;
+    padding: 12px;
+    margin: 7px 0px;
+    border: 1px solid rgb(137, 148, 148);
+}
+
+.div-nombre-precio-producto {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-info-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor-carrito {
+    text-align: center;
+}
+
+.contenedor-total-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total-compra {
+    font-size: 25px;
+    margin: 15px 0px;
+}
+
+.btn-finalizar-compra {
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 5px;
+}
+
+.btn-finalizar-compra:hover{
+    background-color: #fffb00;
+    color: #000;
+}
+
+.span-precio {
+    font-weight: 800;
+    color: rgb(41, 136, 41);
+    font-size: 18px;
+}
+
+.span-nombre {
+    font-weight: 800;
+}
+
+.btn-remover-producto {
+    border: none;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 5px;
+}
