@@ -6,6 +6,7 @@ main {
 #contenedor-resumen {
   display: grid;
   place-content: center;
+  text-align: center;
 }
 
 .container {
@@ -32,8 +33,8 @@ main {
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .input,
@@ -45,7 +46,7 @@ textarea {
 
 .input input,
 textarea {
-  font-size: 100%;
+  font-size: 110%;
   padding: 0.7em;
   outline: none;
   color: #e8e8e8;
@@ -58,6 +59,7 @@ textarea {
 }
 
 .input label {
+  font-weight: 800;
   font-size: 100%;
   position: absolute;
   left: 0;
@@ -133,4 +135,17 @@ textarea {
   padding: 10px 0px;
   border: none;
   border-radius: 5px;
+}
+
+.contenedor-info-producto{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #a6adb1;
+}
+
+.producto-compra {
+  width: 100%;
+  margin-right: 35px;
 }

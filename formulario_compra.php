@@ -7,6 +7,8 @@
   <title>Resumen de Compra</title>
   <link rel="stylesheet" href="./css/form.css">
   <link rel="stylesheet" href="./css/styles.css">
+  <!-- iconos fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
@@ -24,29 +26,29 @@
       <form class="form">
         <div class="descr">Contactanos</div>
         <div class="input">
-          <input required="" autocomplete="off" type="text">
+          <input required="" autocomplete="off" type="text" name="nombre_apellido_usuario_input">
           <label for="name">Nombre y Apellido</label>
         </div>
 
         <div class="input">
-          <input required="" autocomplete="off" name="email" type="text">
+          <input required="" autocomplete="off" name="email_usuario_input" type="text">
           <label for="email">E-mail</label>
         </div>
 
         <div class="input">
-          <input required="" autocomplete="off" name="tel" type="tel">
+          <input required="" autocomplete="off" name="tel_usuario_input" type="tel">
           <label for="tel">Teléfono Celular</label>
         </div>
 
         <div class="input input-select">
           <label for="message">¿Cómo pagás?</label>
-          <select id="select-pagos">
+          <select id="select-pagos" name="metodo_pago_input">
             <option value="">Seleccionar</option>
             <option value="Efectivo">Efectivo</option>
             <option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
             <option value="Tarjeta de Débito">Tarjeta de Débito</option>
           </select>
-          
+
         </div>
         <button>Finalizar Compra →</button>
       </form>
@@ -57,7 +59,7 @@
       <div class="contenido-resumen-compra">
 
       </div>
-      <div class="descr">Total: $0</div>
+      <div class="descr" id="total-resumen">Total: $0</div>
     </div>
   </main>
   <footer>
