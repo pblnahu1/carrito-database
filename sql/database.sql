@@ -3,19 +3,25 @@
 CREATE DATABASE carrito_database
 DEFAULT CHARACTER SET = 'utf8mb4';
 
+
 CREATE TABLE IF NOT EXISTS USUARIOS (
-    id_usuario INT NOT NULL AUTO_INCREMENT,
+    id_usuario INT NOT NULL,
     nombre_apellido VARCHAR(50) NOT NULL,
     email_usuario VARCHAR(60) NOT NULL,
     telefono_usuario VARCHAR(25) NOT NULL,
     metodo_pago VARCHAR(60) NOT NULL,
-    CONSTRAINT pk_id_usuario PRIMARY KEY(id_usuario),
+    PRIMARY KEY(id_usuario),
     CONSTRAINT ck_metodo_pago CHECK(metodo_pago IN('Tarjeta de Crédito', 'Tarjeta de Débito', 'Efectivo'))
 );
 
+TRUNCATE TABLE usuarios;
+
+DROP TABLE usuarios;
+
+SELECT * FROM usuarios;
 
 
-CREATE TABLE IF NOT EXISTS TELEFONO (
+/*CREATE TABLE IF NOT EXISTS TELEFONO (
     id_telefono INT NOT NULL AUTO_INCREMENT,
     telefono_numero VARCHAR(25) NOT NULL,
     id_usuario INT NOT NULL,
@@ -23,27 +29,39 @@ CREATE TABLE IF NOT EXISTS TELEFONO (
     CONSTRAINT fk_id_usuario FOREIGN KEY(id_usuario) REFERENCES USUARIOS(id_usuario)
 );
 
+ALTER TABLE telefono DROP CONSTRAINT fk_id_usuario;
+ALTER TABLE telefono DROP COLUMN id_usuario;
+DROP TABLE telefono;
+SELECT * FROM telefono;*/
 
 
 CREATE TABLE IF NOT EXISTS PRODUCTOS (
-    id_producto INT NOT NULL AUTO_INCREMENT,
+    id_producto INT NOT NULL,
     nombre_producto VARCHAR(100) NOT NULL,
     precio_producto INT NOT NULL,
-    CONSTRAINT pk_id_producto PRIMARY KEY(id_producto)
+    PRIMARY KEY(id_producto)
 );
+
+DROP TABLE productos;
+
+SELECT * FROM productos;
 
 
 
 CREATE TABLE IF NOT EXISTS USERXPROD (
     id_usuario INT NOT NULL,
     id_producto INT NOT NULL,
-    CONSTRAINT fk_interrelacion_id_usuario_ FOREIGN KEY(id_usuario) REFERENCES USUARIOS(id_usuario),
-    CONSTRAINT fk_interrelacion_id_producto FOREIGN KEY(id_producto) REFERENCES PRODUCTOS(id_producto),
+    FOREIGN KEY(id_usuario) REFERENCES USUARIOS(id_usuario),
+    FOREIGN KEY(id_producto) REFERENCES PRODUCTOS(id_producto),
     PRIMARY KEY (id_usuario, id_producto)
 );
 
+ALTER TABLE userxprod DROP CONSTRAINT fk_interrelacion_id_usuario;
 
-SELECT * FROM USUARIOS;
-SELECT * FROM TELEFONO;
-SELECT * FROM PRODUCTOS;
-SELECT * FROM USERXPROD;
+ALTER TABLE userxprod DROP CONSTRAINT fk_interrelacion_id_producto;
+
+SELECT * FROM userxprod;
+
+TRUNCATE TABLE userxprod;
+
+DROP TABLE userxprod;
