@@ -14,26 +14,13 @@ CREATE TABLE IF NOT EXISTS USUARIOS (
     CONSTRAINT ck_metodo_pago CHECK(metodo_pago IN('Tarjeta de Crédito', 'Tarjeta de Débito', 'Efectivo'))
 );
 
-TRUNCATE TABLE usuarios;
-
-DROP TABLE usuarios;
-
-SELECT * FROM usuarios;
-
-
 /*CREATE TABLE IF NOT EXISTS TELEFONO (
     id_telefono INT NOT NULL AUTO_INCREMENT,
     telefono_numero VARCHAR(25) NOT NULL,
     id_usuario INT NOT NULL,
     CONSTRAINT pk_id_telefono PRIMARY KEY(id_telefono),
     CONSTRAINT fk_id_usuario FOREIGN KEY(id_usuario) REFERENCES USUARIOS(id_usuario)
-);
-
-ALTER TABLE telefono DROP CONSTRAINT fk_id_usuario;
-ALTER TABLE telefono DROP COLUMN id_usuario;
-DROP TABLE telefono;
-SELECT * FROM telefono;*/
-
+);*/
 
 CREATE TABLE IF NOT EXISTS PRODUCTOS (
     id_producto INT NOT NULL,
@@ -42,12 +29,6 @@ CREATE TABLE IF NOT EXISTS PRODUCTOS (
     PRIMARY KEY(id_producto)
 );
 
-DROP TABLE productos;
-
-SELECT * FROM productos;
-
-
-
 CREATE TABLE IF NOT EXISTS USERXPROD (
     id_usuario INT NOT NULL,
     id_producto INT NOT NULL,
@@ -55,13 +36,3 @@ CREATE TABLE IF NOT EXISTS USERXPROD (
     FOREIGN KEY(id_producto) REFERENCES PRODUCTOS(id_producto),
     PRIMARY KEY (id_usuario, id_producto)
 );
-
-ALTER TABLE userxprod DROP CONSTRAINT fk_interrelacion_id_usuario;
-
-ALTER TABLE userxprod DROP CONSTRAINT fk_interrelacion_id_producto;
-
-SELECT * FROM userxprod;
-
-TRUNCATE TABLE userxprod;
-
-DROP TABLE userxprod;

@@ -23,7 +23,7 @@
   </header>
   <main>
     <div class="container">
-      <form class="form" action="./php/insertarJSON.php" method="post">
+      <form class="form" action="./php/proceso_datos.php" method="post">
         <div class="descr">Contactanos</div>
         <div class="input">
           <input required="" autocomplete="off" type="text" name="nombre_apellido_usuario_input" id="input_names">
@@ -52,7 +52,7 @@
 
         <input type="submit" name="enviar-datos-personales" value="Finalizar Compra →" class="btn-finalizar-compra"></input>
         <input type="hidden" name="resumen-compra" id="resumen-compra-input">
-        <?php include('./php/insertarJSON.php'); ?>
+        <?php include('./php/proceso_datos.php'); ?>
       </form>
     </div>
 
