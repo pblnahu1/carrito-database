@@ -139,7 +139,7 @@ const productos_agregados_json = () => {
             console.log(producto);
 
             // Almaceno productos en localStorage
-            localStorage.setItem(`producto-${index}`, JSON.stringify(producto));
+            localStorage.setItem(`id-producto-${index}`, JSON.stringify(producto));
           } else {
             console.warn(`No se encontró el producto correspondiente al índice [${index}]`);
           }
@@ -186,7 +186,7 @@ const productos_agregados_json = () => {
 }
 
 
-const render = () =>{
+const render = () => {
   mostrar_ventana_carrito();
   productos_json_main();
   productos_agregados_json();

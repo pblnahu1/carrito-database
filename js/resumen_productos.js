@@ -26,19 +26,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const productosEnCarrito = Object.keys(localStorage)
-    .filter(key => key.startsWith('producto-'))
+    .filter(key => key.startsWith(`id-producto-`))
     .map(key => JSON.parse(localStorage.getItem(key)));
+  
+  let contenedor_resumen_productos = document.createElement("div");
+  contenedor_resumen_productos.classList.add("contenedor-resumen-productos");
+  contenedorResumen.appendChild(contenedor_resumen_productos);
 
   productosEnCarrito.forEach((producto, index) => {
-
     let contenedor_info_producto = document.createElement("div");
     contenedor_info_producto.classList.add("contenedor-info-producto");
     contenedor_info_producto.id = `id-contenedor-info-producto-${index}`;
-    contenedorResumen.appendChild(contenedor_info_producto);
+    contenedor_resumen_productos.appendChild(contenedor_info_producto);
 
     const productoDiv = document.createElement("div");
     productoDiv.classList.add("producto-compra");
-    productoDiv.id = `producto-${index}`;
+    productoDiv.id = `${index}`;
     productoDiv.setAttribute('data-precio', producto.precio);
     productoDiv.innerHTML = `
       <p>Producto: ${producto.nombre}</p>
@@ -60,9 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
     actualizar_total_resumen();
   });
   
+  const contenedor_btn_eliminar_todos = document.createElement("div");
+  contenedor_btn_eliminar_todos.classList.add("c-btn-eliminar-productos-localstorage");
+  contenedorResumen.appendChild(contenedor_btn_eliminar_todos);
+
   const boton_eliminar_todos = document.createElement("button");
+  boton_eliminar_todos.classList.add("btn-eliminar-todos-resumen-productos");
   boton_eliminar_todos.innerText = "Eliminar Todos";
   boton_eliminar_todos.addEventListener("click", eliminar_todos_los_productos);
-  contenedorResumen.appendChild(boton_eliminar_todos);
+  contenedor_btn_eliminar_todos.appendChild(boton_eliminar_todos);
 });
 

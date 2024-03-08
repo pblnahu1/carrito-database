@@ -170,6 +170,7 @@ nav {
 }
 
 .btn-remover-producto {
+    cursor: pointer;
     border: none;
     padding: 8px;
     background-color: #fff;

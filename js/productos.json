@@ -38,5 +38,15 @@
     "id": 8,
     "nombre": "Robot aspirador iRobot Roomba i7+",
     "precio": 799
+  },
+  {
+    "id": 9,
+    "nombre": "Mouse RGB",
+    "precio": 1000
+  },
+  {
+    "id": 10,
+    "nombre": "iPhone 11 Pro Max",
+    "precio": 2499
   }
-]
+] 
