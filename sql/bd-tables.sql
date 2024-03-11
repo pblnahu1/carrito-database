@@ -3,6 +3,8 @@
 CREATE DATABASE carrito_database
 DEFAULT CHARACTER SET = 'utf8mb4';
 
+DROP DATABASE carrito_database;
+
 
 CREATE TABLE IF NOT EXISTS USUARIOS (
     id_usuario INT NOT NULL,
