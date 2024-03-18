@@ -16,6 +16,8 @@ CREATE TABLE IF NOT EXISTS USUARIOS (
     CONSTRAINT ck_metodo_pago CHECK(metodo_pago IN('Tarjeta de Crédito', 'Tarjeta de Débito', 'Efectivo'))
 );
 
+ALTER TABLE `usuarios` MODIFY COLUMN id_usuario INT NOT NULL AUTO_INCREMENT;
+
 /*CREATE TABLE IF NOT EXISTS TELEFONO (
     id_telefono INT NOT NULL AUTO_INCREMENT,
     telefono_numero VARCHAR(25) NOT NULL,
